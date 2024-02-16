@@ -1,4 +1,4 @@
-# HintLLM
+# HSP
 Code and data accompanying our paper ["Hint-before-Solving Prompting: Guiding LLMs to
 Effectively Utilize Encoded Knowledge"]() in [ACL 2024]().
 
@@ -58,7 +58,7 @@ If you find this repository useful, please cite our paper:
 Effectively Utilize Encoded Knowledge},
   author={},
   journal={},
-  year={2024}
+  year={}
 }
 ```
 
