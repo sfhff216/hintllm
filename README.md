@@ -27,6 +27,13 @@ pip install vllm
 - `inference.py`: Run the model to make predictions on a dataset.
 - `produce_hintV2.py`: First generate hint and then generate solution.
 - `produce_hintV2_gpt.py`: Use gpt4's hint to generate solution.
+- `math/`: evaluation on Math datasets.
+  - `data/`: Math datasets.
+  - `prompt/`: The prompts used to in experiment.
+  -  `evaluate.py`: evaluation script.
+  -  `produce.py`: inference script.
+  -  `utils.py`: Used for handle data.
+
 
 ## Usage
 
