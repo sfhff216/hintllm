@@ -21,7 +21,7 @@ epoch_output_dir_llemma_7b="./ckpt/with_hint_epochs_llemma_7b"
 srun  \
 torchrun --nnodes 1 --nproc_per_node 8 \
 --rdzv_id $RANDOM --rdzv_backend c10d --rdzv_endpoint $head_node_ip:29549 \
-sft_gsm8k.py \
+sft_train.py \
 --deepspeed  "./deepspeed_config.json"  \
 --model_name_or_path $model_llemma_7b \
 --output_dir $epoch_output_dir_llemma_7b \
@@ -29,7 +29,7 @@ sft_gsm8k.py \
 --per_device_train_batch_size 2 \
 --gradient_accumulation_steps 4 \
 --num_train_epochs 5 \
---data_path "sft_data_v2.jsonl" \
+--data_path "HSPMATH.jsonl" \
 --need_hint True \
 --bf16  \
 --save_strategy epoch \
@@ -38,6 +38,6 @@ sft_gsm8k.py \
 --lr_scheduler_type "cosine" \
 --logging_steps 50 \
 --logging_dir "./logging_dir" \
---report_to="tensorboard" \
+--report_to="wandb" \
 --gradient_checkpointing True \
 --save_total_limit 10
